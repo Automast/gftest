@@ -1,4 +1,46 @@
 {
     "raised": 25000,
-    "goal": 28000
+    "goal": 28000,
+    "donations": [
+        {
+            "name": "John Smith",
+            "amount": 50
+        },
+        {
+            "name": "Emily Johnson",
+            "amount": 25
+        },
+        {
+            "name": "Michael Brown",
+            "amount": 100
+        },
+        {
+            "name": "Sarah Davis",
+            "amount": 10
+        },
+        {
+            "name": "David Wilson",
+            "amount": 200
+        },
+        {
+            "name": "Jennifer Garcia",
+            "amount": 15
+        },
+        {
+            "name": "James Martinez",
+            "amount": 50
+        },
+        {
+            "name": "Linda Robinson",
+            "amount": 30
+        },
+        {
+            "name": "Robert Clark",
+            "amount": 20
+        },
+        {
+            "name": "Maria Rodriguez",
+            "amount": 75
+        }
+    ]
 }
