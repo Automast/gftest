@@ -4,7 +4,8 @@
 <head>
    <meta charset="utf-8">
    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-   <title>Fundraiser by Lauren Fitzmeyer : Support for Aidan, Clay, & Holden After House Fire</title>
+   <title class="js-campaign-title">Fundraiser by Lauren Fitzmeyer : Support for Aidan, Clay, & Holden After House Fire
+   </title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -167,6 +168,22 @@
       .custom-share-btn:hover {
          background-color: #E9FCCD !important;
       }
+
+      /* Helper to remove fade from description */
+      .description-no-fade:after {
+         display: none !important;
+      }
+
+      /* Custom Trust Icon Styling */
+      .hrt-value-prop i {
+         font-size: 2.2rem !important;
+         width: 3rem !important;
+         height: 3rem !important;
+         display: inline-flex !important;
+         align-items: center;
+         justify-content: center;
+         margin-right: 0.5rem !important;
+      }
    </style>
 
 </head>
@@ -262,7 +279,8 @@
                                              <span class="c161 c198">of</span> <span class="c161 c198"
                                                 id="goal-amount-sidebar">0</span>
                                           </h2>
-                                          <div class="c203 c161">479 donations</div>
+                                          <div class="c203 c161"><span class="js-donator-count">479</span> donations
+                                          </div>
                                        </div>
                                     </div>
                                     <div class="c34 c51"></div>
@@ -273,8 +291,8 @@
                                     <div class="c68"><button class="c154 c123 c115 c101 c220 custom-share-btn"
                                           type="button">Share</button>
                                     </div>
-                                    <div class="c53"><a class="c176 c133 c126 c114 c220"
-                                          href="/donate"><span>Donate</span></a></div>
+                                    <div class="c53"><a class="c176 c133 c126 c114 c220 js-donate-button"
+                                          href="#"><span>Donate</span></a></div>
                                  </div>
                               </div>
                               <div id="donation-list-sidebar"></div>
@@ -295,11 +313,13 @@
                                        <div class="m-campaign-byline m-campaign-byline--teams">
                                           <div class="c200 c234">
                                              <div class="c148 c258 c22"><button class="c58">
-                                                   <div class="hrt-default-avatar c244 c186 c168 c39 c73 c149"><i
-                                                         class="fa-solid fa-user c271 c189"></i></div>
+                                                   <div class="hrt-default-avatar c244 c186"
+                                                      style="background-color: #FFD863;"><i
+                                                         class="fa-regular fa-user c271 c189"></i></div>
                                                 </button></div>
                                              <div class="m-campaign-byline-description"><button
-                                                   class="c204 c236 c212 c78 c221 hrt-text-button--gray-dark c117"><strong>Lauren
+                                                   class="c204 c236 c212 c78 c221 hrt-text-button--gray-dark c117"><strong
+                                                      class="js-raise-owners-text">Lauren
                                                       Fitzmeyer and 2 others</strong></button></div>
                                           </div>
                                        </div>
@@ -307,7 +327,7 @@
                                     <div class="c261 c268 c217 c91">
                                        <header class="c194">
                                           <div>
-                                             <h1 class="c40 c214 c264 c248 c211">Support for Aidan,
+                                             <h1 class="c40 c214 c264 c248 c211 js-campaign-title">Support for Aidan,
                                                 Clay,
                                                 & Holden After House Fire</h1>
                                           </div>
@@ -375,8 +395,9 @@
                               </div>
                            </div>
                            <div class="c34 c51" style="display: flex; gap: 10px;">
-                              <div class="c45" style="flex: 1.5;"><a class="c86 c176 c133 c126 c114 c220"
-                                    href="/donate"><span>Donate</span></a></div>
+                              <div class="c45" style="flex: 1.5;"><a
+                                    class="c86 c176 c133 c126 c114 c220 js-donate-button"
+                                    href="#"><span>Donate</span></a></div>
                               <div class="c52" style="flex: 1;"><button
                                     class="c86 c21 c154 c123 c115 c101 c220 custom-share-btn"
                                     type="button">Share</button></div>
@@ -385,7 +406,7 @@
                      </div>
                      <header class="c194 c215">
                         <div>
-                           <h1 class="c248 c211">Support for Aidan,
+                           <h1 class="c248 c211 js-campaign-title">Support for Aidan,
                               Clay,
                               & Holden After House Fire</h1>
                         </div>
@@ -395,11 +416,12 @@
                            <div class="m-campaign-byline m-campaign-byline--teams">
                               <div class="c200 c234">
                                  <div class="c148 c258 c22"><button class="c58">
-                                       <div class="hrt-default-avatar c244 c186 c168 c39 c73 c149"><i
-                                             class="fa-solid fa-user c271 c189"></i></div>
+                                       <div class="hrt-default-avatar c244 c186" style="background-color: #FFD863;"><i
+                                             class="fa-regular fa-user c271 c189"></i></div>
                                     </button></div>
                                  <div class="m-campaign-byline-description"><button
-                                       class="c204 c236 c212 c78 c221 hrt-text-button--gray-dark c117"><strong>Lauren
+                                       class="c204 c236 c212 c78 c221 hrt-text-button--gray-dark c117"><strong
+                                          class="js-raise-owners-text">Lauren
                                           Fitzmeyer and 2 others</strong></button></div>
                               </div>
                            </div>
@@ -433,21 +455,9 @@
                         <div class="c217"></div>
                         <div class="c145 c247 c248 c215 hrt-rule c155"></div>
                         <div class="c11">
-                           <div class="c63 c262" style="max-height:240px">
-                              <div>Aidan Cowan,
-                                 Clay Rowland,
-                                 and Holden Lewis—seniors at Georgia College & State University and members of Kappa
-                                 Sigma fraternity—lost their home and all of their belongings in a devastating house
-                                 fire last night. Thankfully,
-                                 them and the two dogs,
-                                 Rocky and Milo,
-                                 made it out safely,
-                                 but everything else was destroyed.</div>
-                              <div><br></div>
-                              <div>We’re raising funds to help them replace essentials and recover what they can as they
-                                 start from scratch. Any support means the world to them during this difficult time.
-                                 Thank you !</div>
-                           </div><button class="c221 hrt-text-button--gray-dark c117"><span>Read more</span></button>
+                           <div class="c63 c262" style="max-height:400px; overflow:hidden;" id="campaign-description">
+                           </div><button id="read-more-btn" class="c221 hrt-text-button--gray-dark c117"
+                              style="display:none;"><span>Read more</span></button>
                         </div>
                      </div>
                      <div class="c182">
@@ -458,7 +468,7 @@
                               <h2 class="c248 c234 c233" id="donations"><button
                                     class="c234 c204 c233 c199 c64 c221 hrt-text-button--gray-dark c117"><span
                                        class="c79">Donations</span><span
-                                       class="c252 c204 hrt-tag c208 c240 hrt-base-tag--default">479</span></button>
+                                       class="c252 c204 hrt-tag c208 c240 hrt-base-tag--default js-donator-count">479</span></button>
                               </h2><button class="c154 hrt-secondary-button--inline c116 c101 c220" type="button"><i
                                     class="fa-solid fa-star c250 c271 c222"></i>See top </button>
                            </div>
@@ -472,56 +482,19 @@
                            <div class="o-campaign-members" id="campaign-members">
                               <h2 class="c234 c200 c251 c16">
                                  <div class="c2"><span>Fundraising team: Co-organizers</span><span
-                                       class="c252 hrt-tag c208 c240 hrt-base-tag--default">3</span></div>
+                                       class="c252 hrt-tag c208 c240 hrt-base-tag--default js-team-count">3</span></div>
                               </h2>
-                              <div class="c262 c267 c5">
-                                 <div class="c42">
-                                    <div class="c192">
-                                       <div class="c140"><a class="hrt-link hrt-link--gray-dark c188" href="#">
-                                             <div class="hrt-default-avatar c244 c187 c168"><i
-                                                   class="fa-solid fa-user c271 c189"></i></div>
-                                          </a></div>
-                                       <div class="c132"><a class="c255 c232 hrt-link hrt-link--gray-dark c188"
-                                             href="#">Lauren Fitzmeyer</a>
-                                          <div class="c203">Organizer</div>
-                                          <div class="c203">Milledgeville,
-                                             GA</div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="c265 c4">
-                                 <div class="c192">
-                                    <div class="c140"><a class="hrt-link hrt-link--gray-dark c188" href="#">
-                                          <div class="hrt-default-avatar c244 c187 c168"><i
-                                                class="fa-solid fa-user c271 c189"></i></div>
-                                       </a></div>
-                                    <div class="c132"><a class="c255 c232 hrt-link hrt-link--gray-dark c188"
-                                          href="#">Ava Hinzman</a>
-                                       <div class="c203">Team member</div>
-                                    </div>
-                                 </div>
-                                 <div class="c192">
-                                    <div class="c140"><a class="hrt-link hrt-link--gray-dark c188" href="#">
-                                          <div class="c206 c244 c187 c168"><img alt="" height="40"
-                                                src="https://images.Dimehook.com/mTuV2brjOTkLPdymMgW9Y1Fbk90=/128x128/https://lh3.googleusercontent.com/a/ACg8ocJdQk9_d9dX-xEYdp7ungDbTKpNcAtKYKcU50NO_e6ZBp0BxQ=s96-c"
-                                                width="40"></div>
-                                       </a></div>
-                                    <div class="c132"><a class="c255 c232 hrt-link hrt-link--gray-dark c188"
-                                          href="#">Ella Whitener</a>
-                                       <div class="c203">Team member</div>
-                                    </div>
-                                 </div>
-                              </div>
+                              <div id="team-members-container"></div>
                            </div>
                         </div>
                         <div></div>
                         <div class="c145 c247 c248 hrt-rule c155"></div>
                         <ul class="c35 c184 c239">
-                           <li class="c178"><span class="m-campaign-byline-created c250 a-created-date">December 9th,
+                           <li class="c178"><span
+                                 class="m-campaign-byline-created c250 a-created-date js-creation-date">December 9th,
                                  2025</span></li>
                            <li class="c178"><a class="c234 c200 c253 hrt-link hrt-link--gray-dark c153"
-                                 href="/discover/emergency-fundraiser">Emergencies</a></li>
+                                 href="#">Emergencies</a></li>
                            <li class="c178">
                               <div class="c217"><span class="hrt-tag c157 c240 hrt-base-tag--default"
                                     style="cursor:pointer"><i class="fa-solid fa-shield-halved c271 c222"
@@ -543,8 +516,7 @@
                         and trusted home for help</h2>
                      <ul class="c205 c167 c95 c184 c96 c112">
                         <li>
-                           <div class="hrt-value-prop c234"><i
-                                 class="fa-solid fa-hand-holding-heart c258 c271 c223"></i>
+                           <div class="hrt-value-prop c234"><i class="fa-regular fa-paper-plane c258 c271 c223"></i>
                               <div>
                                  <h3 class="hrt-value-prop-title c202 c232 c248">Easy</h3>
                                  <p class="hrt-value-prop-description">Donate quickly and easily</p>
@@ -552,7 +524,7 @@
                            </div>
                         </li>
                         <li>
-                           <div class="hrt-value-prop c234"><i class="fa-solid fa-mobile-screen c258 c271 c223"></i>
+                           <div class="hrt-value-prop c234"><i class="fa-brands fa-first-order-alt c258 c271 c223"></i>
                               <div>
                                  <h3 class="hrt-value-prop-title c202 c232 c248">Powerful</h3>
                                  <p class="hrt-value-prop-description">Send help right to the people and causes you care
@@ -856,7 +828,7 @@
       </div>
       <!-- Buttons -->
       <div class="floating-buttons">
-         <a href="/donate" class="floating-btn-donate">Donate</a>
+         <a href="#" class="floating-btn-donate js-donate-button">Donate</a>
          <button class="floating-btn-share" type="button">Share</button>
       </div>
    </div>
@@ -978,25 +950,171 @@
 
 <script>
    // Donation Configuration
-   // Data is now fetched from donation_goal.json
+   const campaignData = {
+      title: "Support for Aidan, Clay, & Holden After House Fire",
+      creationDate: "December 9th, 2025",
+      donatorCount: 470,
+      raiseOwners: "Lauren Fitzmeyer and 2 others",
+      donateUrl: "/donate",
+      donationGoal: {
+         raised: 21500,
+         goal: 26000
+      },
+      team: [
+         {
+            name: "Lauren Fitzmeyer",
+            type: "Organizer",
+            location: "Milledgeville, GA",
+            image: "profileicon.png"
+         },
+         {
+            name: "Ava Hinzman",
+            type: "Team member",
+            image: "profileicon.png"
+         },
+         {
+            name: "Ella Whitener",
+            type: "Team member",
+            image: "profileicon.png"
+         }
+      ],
+      description: `
+         <div>Aidan Cowan, Clay Rowland, and Holden Lewis—seniors at Georgia College & State University and members of Kappa Sigma fraternity—lost their home and all of their belongings in a devastating house fire last night. Thankfully, them and the two dogs, Rocky and Milo, made it out safely, but everything else was destroyed.</div>
+         <div><br></div>
+         <div>We’re raising funds to help them replace essentials and recover what they can as they start from scratch. Any support means the world to them during this difficult time. Thank you !</div>
+      `
+   };
 
+
+   // Render Campaign Data
+   function renderCampaignData() {
+      // Title
+      document.querySelectorAll('.js-campaign-title').forEach(el => el.textContent = campaignData.title);
+      document.title = "Fundraiser by Lauren Fitzmeyer : " + campaignData.title;
+
+      // Creation Date
+      document.querySelectorAll('.js-creation-date').forEach(el => el.textContent = campaignData.creationDate);
+
+      // Donator Count
+      document.querySelectorAll('.js-donator-count').forEach(el => el.textContent = campaignData.donatorCount);
+
+      // Raise Owners
+      document.querySelectorAll('.js-raise-owners-text').forEach(el => el.textContent = campaignData.raiseOwners);
+
+      // Donate URL
+      document.querySelectorAll('.js-donate-button').forEach(el => el.setAttribute('href', campaignData.donateUrl));
+
+      // Description
+      const descEl = document.getElementById('campaign-description');
+      const readMoreBtn = document.getElementById('read-more-btn');
+
+      if (descEl) {
+         descEl.innerHTML = campaignData.description;
+
+         // Check if content overflows
+         // We need to wait for render or just check scrollHeight immediately if allowed
+         // Sometimes timeout is safer to ensure styles applied, but usually immediate is fine if visible
+         setTimeout(() => {
+            if (descEl.scrollHeight > descEl.clientHeight) {
+               if (readMoreBtn) {
+                  readMoreBtn.style.display = 'inline-block';
+                  // Ensure fade is visible for collapsed long text
+                  descEl.classList.remove('description-no-fade');
+
+                  readMoreBtn.onclick = () => {
+                     descEl.style.maxHeight = 'none';
+                     readMoreBtn.style.display = 'none';
+                     // Remove fade when expanded
+                     descEl.classList.add('description-no-fade');
+                  };
+               }
+            } else {
+               if (readMoreBtn) readMoreBtn.style.display = 'none';
+               // Remove fade for short text
+               descEl.classList.add('description-no-fade');
+            }
+         }, 50);
+      }
+
+      // Team Members
+      const teamContainer = document.getElementById('team-members-container');
+      const teamCountEl = document.querySelector('.js-team-count');
+
+      if (teamCountEl) teamCountEl.textContent = campaignData.team.length;
+
+      if (teamContainer && campaignData.team.length > 0) {
+         let teamHtml = '';
+
+         // Split into first item (separate container) and rest (another container) to match original structure
+         // Original structure had first item in c262 c267 c5, and rest in c265 c4.
+         // We will try to replicate distinct styling if we can, or just append distinct blocks.
+
+         const firstMember = campaignData.team[0];
+         const otherMembers = campaignData.team.slice(1);
+
+         // Helper for image
+         const getAvatarHtml = (member) => {
+            if (member.image) {
+               return `<div class="c206 c244 c187 c168"><img alt="" height="40" src="${member.image}" width="40"></div>`;
+            } else {
+               return `<div class="hrt-default-avatar c244 c187 c168"><i class="fa-solid fa-user c271 c189"></i></div>`;
+            }
+         };
+
+         // Helper for location
+         const getLocationHtml = (member) => {
+            return member.location ? `<div class="c203">${member.location}</div>` : '';
+         };
+
+         // First Member Block
+         teamHtml += `
+            <div class="c262 c267 c5">
+                 <div class="c42">
+                    <div class="c192">
+                       <div class="c140"><a class="hrt-link hrt-link--gray-dark c188" href="#">
+                             ${getAvatarHtml(firstMember)}
+                          </a></div>
+                       <div class="c132"><a class="c255 c232 hrt-link hrt-link--gray-dark c188"
+                             href="#">${firstMember.name}</a>
+                          <div class="c203">${firstMember.type}</div>
+                          ${getLocationHtml(firstMember)}
+                       </div>
+                    </div>
+                 </div>
+            </div>
+         `;
+
+         // Other Members Block
+         if (otherMembers.length > 0) {
+            teamHtml += `<div class="c265 c4">`;
+            otherMembers.forEach(member => {
+               teamHtml += `
+                    <div class="c192">
+                        <div class="c140"><a class="hrt-link hrt-link--gray-dark c188" href="#">
+                            ${getAvatarHtml(member)}
+                        </a></div>
+                        <div class="c132"><a class="c255 c232 hrt-link hrt-link--gray-dark c188"
+                            href="#">${member.name}</a>
+                        <div class="c203">${member.type}</div>
+                        ${getLocationHtml(member)}
+                        </div>
+                    </div>
+                `;
+            });
+            teamHtml += `</div>`;
+         }
+
+         teamContainer.innerHTML = teamHtml;
+      }
+   }
 
    // Update Progress Circle & Amounts
-   async function updateDonationProgress() {
-      let raised, goal;
+   function updateDonationProgress() {
+      // Use data from campaignData object
+      const raised = campaignData.donationGoal.raised;
+      const goal = campaignData.donationGoal.goal;
 
-      try {
-         const response = await fetch('donation_goal.json');
-         if (!response.ok) throw new Error('Network response was not ok');
-         const data = await response.json();
-         raised = data.raised;
-         goal = data.goal;
-      } catch (error) {
-         console.warn("Could not load donation_goal.json, using default values.", error);
-         // Fallback default values if fetch fails (e.g. running locally without server)
-         raised = 25000;
-         goal = 28000;
-      }
+      // ... rest of logic ...
 
       const percent = Math.min(100, Math.max(0, (raised / goal) * 100));
       const radius = 38; // Reduced radius for "smaller" look inside 88px box
@@ -1206,6 +1324,9 @@
 
    // Initialize
    document.addEventListener("DOMContentLoaded", function () {
+      // Render Content first
+      renderCampaignData();
+
       // Initialize Donation Progress
       updateDonationProgress();
 
