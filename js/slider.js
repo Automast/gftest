@@ -32,13 +32,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         slide.style.left = '0';
         slide.style.width = '100%';
         slide.style.height = '100%';
-        // Start invisible for fade-in
-        slide.style.opacity = '0';
+
+        // CSS transition is needed for sliding, but initial state depends on device
         slide.style.transition = 'opacity 0.5s ease-in-out';
         slide.style.display = 'flex';
         slide.style.alignItems = 'center';
         slide.style.justifyContent = 'center';
         slide.style.overflow = 'hidden';
+
+        // Check for mobile (using 768px as standard breakpoint matching CSS often used)
+        const isMobile = window.innerWidth < 768;
+
+        if (index === 0) {
+            if (isMobile) {
+                slide.style.opacity = '0'; // Start invisible for fade-in
+            } else {
+                slide.style.opacity = '1'; // Instant show on desktop for Zoom effect
+            }
+        } else {
+            slide.style.opacity = '0'; // Other slides hidden
+        }
 
         // Blurred Background
         const startBg = document.createElement('div');
@@ -79,11 +92,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
         dotsContainer.appendChild(dot);
 
-        // If this is the first slide, show it immediately with fade-in
+        // If this is the first slide, handle visibility
         if (index === 0) {
-            // Force reflow to ensure transition plays
-            void slide.offsetWidth;
-            slide.style.opacity = '1';
+            if (isMobile) {
+                // Trigger Fade In
+                void slide.offsetWidth;
+                slide.style.opacity = '1';
+            }
             slide.style.zIndex = '10';
             dot.className = 'c135 c90 c83'; // Active dot
         }
