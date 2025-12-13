@@ -78,7 +78,7 @@
             /* Match page background (white) */
             border-top-left-radius: 50% 100%;
             border-top-right-radius: 50% 100%;
-            z-index: 5;
+            z-index: 20;
             pointer-events: none;
          }
 
@@ -322,7 +322,10 @@
                                                 <div>
                                                    <div id="slider-container" class="c148 hrt-overflow-hidden c29"
                                                       style="position: relative;">
-                                                      < !-- Slides will be injected here by JS -->
+                                                      <div id="slider-loading"
+                                                         style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #666;">
+                                                         Loading...</div>
+                                                      <!-- Slides will be injected here by JS -->
                                                    </div>
                                                 </div>
                                              </div>
@@ -331,7 +334,7 @@
                                     </div>
                                     <div class="c60 c234 c200 c149">
                                        <div id="slider-dots" class="c171 c57 c84 c89">
-                                          < !-- Dots injected by JS -->
+                                          <!-- Dots injected by JS -->
                                        </div>
                                     </div>
                                     <div class="c41 c149 c215" id="slider-arrows"><button id="slider-prev"
