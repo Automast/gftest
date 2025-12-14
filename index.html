@@ -295,6 +295,18 @@
                                           href="#"><span>Donate</span></a></div>
                                  </div>
                               </div>
+                              <div class="recent-donations-summary-container"
+                                 style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                 <div
+                                    style="background-color: #F3E8F5; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                    <i class="fa-solid fa-arrow-trend-up"
+                                       style="color: #6E2594; font-size: 1.2rem;"></i>
+                                 </div>
+                                 <div class="js-recent-donations-summary"
+                                    style="color: #6E2594; font-weight: 700; font-size: 1rem;">
+                                    <!-- Text will be injected here -->
+                                 </div>
+                              </div>
                               <div id="donation-list-sidebar"></div>
                               <div class="c234 c164 c262"><button
                                     class="c228 c258 c154 hrt-secondary-button--inline c106 c101 c220"
@@ -458,6 +470,18 @@
                            <div class="c63 c262" style="max-height:400px; overflow:hidden;" id="campaign-description">
                            </div><button id="read-more-btn" class="c221 hrt-text-button--gray-dark c117"
                               style="display:none;"><span>Read more</span></button>
+
+                           <!-- Reaction Section -->
+                           <div class="reaction-section">
+                              <button class="reaction-btn">
+                                 <img src="svg/heart-plus.svg" alt="React">
+                                 <span>React</span>
+                              </button>
+                              <div class="reaction-display">
+                                 <span class="reaction-emojis">❤️‍🩹 💚 💐 🙏 ✨ 👏</span>
+                                 <span class="reaction-count">361</span>
+                              </div>
+                           </div>
                         </div>
                      </div>
                      <div class="c182">
@@ -473,6 +497,17 @@
                                     class="fa-solid fa-star c250 c271 c222"></i>See top </button>
                            </div>
                            <div class="p-campaign-metadata-indicator"></div>
+                           <div class="recent-donations-summary-container"
+                              style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                              <div
+                                 style="background-color: #F3E8F5; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                 <i class="fa-solid fa-arrow-trend-up" style="color: #6E2594; font-size: 1.2rem;"></i>
+                              </div>
+                              <div class="js-recent-donations-summary"
+                                 style="color: #6E2594; font-weight: 700; font-size: 1rem;">
+                                 <!-- Text will be injected here -->
+                              </div>
+                           </div>
                            <div id="donation-list-main"></div><button class="c262 c174 c218 c154 c43 c106 c101 c220"
                               type="button"><span>See all</span></button>
                         </div>
@@ -481,12 +516,27 @@
                            <div class="c145 hrt-rule c155"></div>
                            <div class="o-campaign-members" id="campaign-members">
                               <h2 class="c234 c200 c251 c16">
-                                 <div class="c2"><span>Fundraising team: Co-organizers</span><span
+                                 <div class="c2"><span>Organizers</span><span
                                        class="c252 hrt-tag c208 c240 hrt-base-tag--default js-team-count">3</span></div>
                               </h2>
                               <div id="team-members-container"></div>
                            </div>
                         </div>
+
+                        <!-- Words of Support Section (Mobile Only) -->
+                        <div class="words-of-support-section">
+                           <div class="c145 hrt-rule c155"></div>
+                           <h2 class="c234 c200 c251 c16" style="margin-bottom: 0.5rem;">
+                              <div class="c2">Words of support <span
+                                    class="c252 hrt-tag c208 c240 hrt-base-tag--default">68</span></div>
+                           </h2>
+                           <p style="color: #666; font-size: 1rem; margin-bottom: 20px;">Please donate to share words of
+                              support.</p>
+                           <div id="words-of-support-list"></div>
+                           <button class="c262 c174 c218 c154 c43 c106 c101 c220" type="button"><span>See
+                                 all</span></button>
+                        </div>
+
                         <div></div>
                         <div class="c145 c247 c248 hrt-rule c155"></div>
                         <ul class="c35 c184 c239">
@@ -503,8 +553,7 @@
                         </ul>
                         <div class="c145 c247 c248 hrt-rule c155"></div>
                      </div>
-                     <div class="c138"><a class="c249 c169 hrt-tertiary-button--inline c107 c220" href="#"><i
-                              class="fa-regular fa-flag c250 c271 c189"></i>Report fundraiser </a></div>
+
                   </div>
                </div>
             </main>
@@ -901,6 +950,26 @@
       color: #000;
    }
 
+   /* Words of Support CSS */
+   .words-of-support-section {
+      display: block;
+      margin-top: 20px;
+   }
+
+   @media (max-width: 768px) {
+      .words-of-support-section {
+         display: block;
+      }
+   }
+
+   .support-message-text {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #1d1d1f;
+      line-height: 1.4;
+   }
+
+
    .donation-time {
       color: #666;
       cursor: pointer;
@@ -946,13 +1015,74 @@
       opacity: 0;
       transform: translateY(-100%);
    }
+
+   /* Reaction Section Styles */
+   .reaction-section {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 24px;
+      padding-bottom: 24px;
+   }
+
+   .reaction-btn {
+      background: none;
+      border: 1px solid transparent;
+      padding: 8px 16px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #333;
+      transition: all 0.2s ease;
+      font-family: inherit;
+   }
+
+   .reaction-btn img {
+      width: 20px;
+      height: 20px;
+   }
+
+   .reaction-btn:hover {
+      background-color: #f7f7f7;
+      border-color: #f7f7f7;
+   }
+
+   .reaction-display {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+   }
+
+   .reaction-display:hover {
+      background-color: #f7f7f7;
+      border-color: #f7f7f7;
+   }
+
+   .reaction-emojis {
+      font-size: 1.2rem;
+      letter-spacing: -2px;
+   }
+
+   .reaction-count {
+      text-decoration: underline;
+      color: #333;
+      font-weight: 400;
+   }
 </style>
 
 <script>
    // Donation Configuration
    const campaignData = {
       title: "Support for Aidan, Clay, & Holden After House Fire",
-      creationDate: "December 9th, 2025",
+      creationDate: "7 d ago",
       donatorCount: 470,
       raiseOwners: "Lauren Fitzmeyer and 2 others",
       donateUrl: "/donate",
@@ -965,19 +1095,11 @@
             name: "Lauren Fitzmeyer",
             type: "Organizer",
             location: "Milledgeville, GA",
-            image: "profileicon.png"
-         },
-         {
-            name: "Ava Hinzman",
-            type: "Team member",
-            image: "profileicon.png"
-         },
-         {
-            name: "Ella Whitener",
-            type: "Team member",
+            location: "Milledgeville, GA",
             image: "profileicon.png"
          }
       ],
+      recentDonationsSummary: "2K people just donated",
       description: `
          <div>Aidan Cowan, Clay Rowland, and Holden Lewis—seniors at Georgia College & State University and members of Kappa Sigma fraternity—lost their home and all of their belongings in a devastating house fire last night. Thankfully, them and the two dogs, Rocky and Milo, made it out safely, but everything else was destroyed.</div>
          <div><br></div>
@@ -1003,6 +1125,9 @@
 
       // Donate URL
       document.querySelectorAll('.js-donate-button').forEach(el => el.setAttribute('href', campaignData.donateUrl));
+
+      // Recent Donations Summary
+      document.querySelectorAll('.js-recent-donations-summary').forEach(el => el.textContent = campaignData.recentDonationsSummary);
 
       // Description
       const descEl = document.getElementById('campaign-description');
@@ -1253,7 +1378,7 @@
          html += `
                 <div class="donation-item">
                     <div class="donation-icon">
-                        <img src="hand.svg" alt="Heart Icon">
+                        <img src="svg/hand.svg" alt="Heart Icon">
                     </div>
                     <div class="donation-info">
                         <div class="donation-name">${donation.name}</div>
@@ -1316,10 +1441,53 @@
       }
 
       // Start immediately
+      // Start off
       showNext();
       // Cycle every 2.5 seconds
       setInterval(showNext, 2500);
    }
+
+   // Words of Support Data
+   const wordsOfSupportData = [
+      { name: "Sarah Mitchell", amount: "$50", time: "2 hrs", message: "Sending all our love and strength to the family. You got this! ❤️" },
+      { name: "James Wilson", amount: "$25", time: "3 hrs", message: "Hope this helps a little. Keeping you in my prayers. 🙏" },
+      { name: "Emily Cooper", amount: "$100", time: "5 hrs", message: "Thinking of you all during this tough time. Stay strong! 💪" },
+      { name: "Michael Chang", amount: "$20", time: "6 hrs", message: "Sending positive vibes your way! ✨" },
+      { name: "Jessica Malone", amount: "$40", time: "8 hrs", message: "So glad to support such a wonderful cause. ❤️" },
+      { name: "David Ross", amount: "$15", time: "10 hrs", message: "Wishing you a speedy recovery and all the best." },
+      { name: "Amanda Kelly", amount: "$30", time: "12 hrs", message: "Lots of love from the Kelly family! ❤️❤️❤️" },
+      { name: "Robert Turner", amount: "$50", time: "1 d", message: "Keep fighting the good fight! We are with you." },
+      { name: "Jennifer Clark", amount: "$10", time: "1 d", message: "Every little bit helps. God bless! 🙏" },
+      { name: "Daniel Wright", amount: "$25", time: "2 d", message: "Stay sweet and strong!" }
+   ];
+
+   function renderWordsOfSupport() {
+      const container = document.getElementById('words-of-support-list');
+      if (!container) return;
+
+      const shuffled = [...wordsOfSupportData].sort(() => 0.5 - Math.random()).slice(0, 5);
+
+      let html = '';
+      shuffled.forEach(item => {
+         html += `
+            <div class="donation-item" style="align-items: flex-start;">
+                <div class="donation-icon">
+                     <img src="svg/hand.svg" alt="Heart Icon">
+                </div>
+                <div class="donation-info">
+                    <div class="donation-name" style="font-weight: 700;">${item.name}</div>
+                    <div class="donation-meta">
+                        <span class="donation-amount">${item.amount}</span> &middot; 
+                        <span class="donation-time">${item.time}</span>
+                    </div>
+                    <div class="support-message-text">${item.message}</div>
+                </div>
+            </div>
+           `;
+      });
+      container.innerHTML = html;
+   }
+
 
 
    // Initialize
@@ -1338,6 +1506,10 @@
       // Start Tickers
       startDonationTicker('donation-ticker-container');
       startDonationTicker('donation-ticker-mobile-float');
+
+      // Words of Support
+      renderWordsOfSupport();
+
 
       // Floating Bar Logic
       const floatingBar = document.getElementById('floating-donation-bar');
@@ -1361,6 +1533,30 @@
             }
          });
       }
+
+      // Share Button Logic
+      const shareButtons = document.querySelectorAll('.custom-share-btn, .floating-btn-share');
+      shareButtons.forEach(btn => {
+         btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const currentUrl = window.location.href;
+
+            // Show Loading Spinner
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i>';
+
+            setTimeout(() => {
+               navigator.clipboard.writeText(currentUrl).then(() => {
+                  btn.innerText = 'Link Copied!';
+                  setTimeout(() => {
+                     btn.innerText = 'Share';
+                  }, 3000);
+               }).catch(err => {
+                  console.error('Failed to copy: ', err);
+                  btn.innerText = 'Share'; // Revert on error
+               });
+            }, 2000);
+         });
+      });
    });
 </script>
 
