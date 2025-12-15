@@ -264,7 +264,7 @@
                                                    stroke="url(#gradient-sidebar)" stroke-width="9.6"
                                                    class="progress-ring-circle" id="progress-circle-sidebar"
                                                    stroke-dasharray="238.76" stroke-dashoffset="238.76"
-                                                   transform="rotate(-90 50 50)" /><text x="50" y="55"
+                                                   transform="rotate(-90 50 50)" /><text x="50" y="50" dy="0.3em"
                                                    text-anchor="middle" class="progress-text" fill="#333" font-size="18"
                                                    font-weight="800" transform="rotate(90 50 50)"
                                                    id="progress-text-sidebar">
@@ -392,9 +392,10 @@
                                        <circle cx="50" cy="50" r="38" fill="none" stroke="url(#gradient-main)"
                                           stroke-width="9.6" class="progress-ring-circle" id="progress-circle-main"
                                           stroke-dasharray="238.76" stroke-dashoffset="238.76"
-                                          transform="rotate(-90 50 50)" /><text x="50" y="55" text-anchor="middle"
-                                          class="progress-text" fill="#333" font-size="18" font-weight="800"
+                                          transform="rotate(-90 50 50)" /><text x="50" y="50" text-anchor="middle"
+                                          dy="0.3em" class="progress-text" fill="#333" font-size="18" font-weight="800"
                                           transform="rotate(90 50 50)" id="progress-text-main">
+
                                        </text>
                                     </svg></div>
                               </div>
@@ -727,8 +728,7 @@
       /* ... (unchanged parts implied, but I must provide contiguous block if using single replace) */
       /* Since I need to replace CSS and JS which are far apart, I should probably use multi_replace or two calls. */
       /* The user prompt implies I can use 'replace_file_content'. I'll try to do them separately to be safe or verify line numbers. */
-      /* The CSS is around line 666. The JS is around line 1144. They are far apart. I must use multi_replace or sequential calls. */
-      /* I will use multi_replace. */
+      /* The CSS is around line 666. The JS is around line 1144. They are far apart. I will use multi_replace. */
 
       .floating-donation-bar.visible {
          transform: translateY(0);
@@ -865,7 +865,7 @@
                <circle cx="50" cy="50" r="38" fill="none" stroke="url(#gradient-float)" stroke-width="9.6"
                   class="progress-ring-circle" id="progress-circle-mobile-float" stroke-dasharray="238.76"
                   stroke-dashoffset="238.76" transform="rotate(-90 50 50)" />
-               <text x="50" y="55" text-anchor="middle" class="progress-text" fill="#333" font-size="18"
+               <text x="50" y="50" text-anchor="middle" dy="0.3em" class="progress-text" fill="#333" font-size="18"
                   font-weight="800" transform="rotate(90 50 50)" id="progress-text-mobile-float"></text>
             </svg>
          </div>
@@ -1317,11 +1317,14 @@
                // Create main number tspan
                const numSpan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
                numSpan.textContent = currentVal;
+               numSpan.setAttribute("x", "50");
+               numSpan.setAttribute("dy", "0.3em");
+               numSpan.setAttribute("text-anchor", "middle");
 
                // Create percent tspan (superscript)
                const percentSpan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
                percentSpan.textContent = "%";
-               percentSpan.setAttribute("dy", "-4"); // Move up slightly
+               percentSpan.setAttribute("dy", "-0.3em"); // Adjust to be slightly higher than cap
                percentSpan.setAttribute("font-size", "12"); // Smaller font
 
                textEl.appendChild(numSpan);
@@ -1334,9 +1337,13 @@
                   textEl.innerHTML = '';
                   const finalNumSpan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
                   finalNumSpan.textContent = Math.round(percent);
+                  finalNumSpan.setAttribute("x", "50");
+                  finalNumSpan.setAttribute("dy", "0.3em");
+                  finalNumSpan.setAttribute("text-anchor", "middle");
+
                   const finalPercentSpan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
                   finalPercentSpan.textContent = "%";
-                  finalPercentSpan.setAttribute("dy", "-4");
+                  finalPercentSpan.setAttribute("dy", "-0.3em");
                   finalPercentSpan.setAttribute("font-size", "12");
                   textEl.appendChild(finalNumSpan);
                   textEl.appendChild(finalPercentSpan);
