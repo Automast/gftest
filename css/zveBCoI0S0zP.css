@@ -389,22 +389,22 @@
   --hrt-time-transition: 0.5s;
   --hrt-time-delay-offset: 0.06s;
   --hrt-time-delay-guidance: 1.5s;
-  --hrt-asset-font-name: "DimeHookSans";
-  --hrt-asset-font-file-name: "DimeHookSans-Regular.woff2";
+  --hrt-asset-font-name: "DimeSans";
+  --hrt-asset-font-file-name: "DimeSans-Regular.woff2";
   --hrt-asset-font-style: "normal";
   --hrt-asset-font-weight: "100 400";
-  --hrt-asset-font-medium-name: "DimeHookSans";
-  --hrt-asset-font-medium-file-name: "DimeHookSans-Medium.woff2";
+  --hrt-asset-font-medium-name: "DimeSans";
+  --hrt-asset-font-medium-file-name: "DimeSans-Medium.woff2";
   --hrt-asset-font-medium-style: "normal";
   --hrt-asset-font-medium-weight: "500 600";
-  --hrt-asset-font-bold-name: "DimeHookSans";
-  --hrt-asset-font-bold-file-name: "DimeHookSans-Bold.woff2";
+  --hrt-asset-font-bold-name: "DimeSans";
+  --hrt-asset-font-bold-file-name: "DimeSans-Bold.woff2";
   --hrt-asset-font-bold-style: "normal";
   --hrt-asset-font-bold-weight: "700 900";
   --hrt-base-px-font-size: 1rem;
   --hrt-content-icon-bullet: "•";
   --hrt-content-icon-middot: "·";
-  --hrt-font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  --hrt-font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   --hrt-font-family-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono",
     "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
     "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -433,7 +433,7 @@
 html {
   box-sizing: border-box;
   color: var(--hrt-color-text-default);
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   tab-size: 4;
@@ -816,7 +816,7 @@ select {
 }
 
 .c165 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.1;
@@ -833,14 +833,14 @@ select {
 }
 
 .c166 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.1;
 }
 
 .c213 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -855,7 +855,7 @@ select {
 
 .c201,
 .c202 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5;
@@ -871,7 +871,7 @@ select {
 }
 
 .c203 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -1008,7 +1008,7 @@ select {
 }
 
 .c186 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -1025,7 +1025,7 @@ select {
 }
 
 .c187 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -1106,7 +1106,7 @@ select {
 }
 
 .c176 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -1154,7 +1154,7 @@ select {
 }
 
 .c154 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -1199,7 +1199,7 @@ select {
 }
 
 .c116 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   border-radius: 624.9375rem;
@@ -1417,7 +1417,7 @@ select {
 }
 
 .c240 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -1882,7 +1882,7 @@ select {
 }
 
 .c136 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -1893,7 +1893,7 @@ select {
 }
 
 .c98 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -1915,7 +1915,7 @@ select {
 
 @media (min-width: 48em) {
   .c239 {
-    font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+    font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     letter-spacing: 0;
@@ -2219,7 +2219,7 @@ h1 {
 
 h1,
 h2 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -2232,7 +2232,7 @@ h2 {
 }
 
 h3 {
-  font-family: DimeHookSans, Trebuchet, Helvetica, Arial, sans-serif;
+  font-family: DimeSans, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0;
